@@ -1,0 +1,43 @@
+.body {
+    background-color: rgb(233, 233, 233) !important;
+}
+.navbar-cor {
+    background-color: white !important;
+    border-bottom: solid rgb(30, 0, 255) 3px;
+}
+
+.button-navbar-cor {
+    background-color: blue;
+    color: white;
+}
+
+.tamanho-carrossel {
+    justify-self: center;
+}
+
+.tamanho-img-carrossel {
+    height: 500px;
+    width: 800px !important;
+}
+
+.h5-carrossel {
+    color: black;
+    font-weight: bold;
+    background-color: green;    
+}
+
+.h1-mvp {
+    text-align: center;
+}
+
+.cards-times {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    padding-top: 40px;
+}
+
+.barra-progresso {
+    width: 1000px;
+    justify-self: center;
+}
