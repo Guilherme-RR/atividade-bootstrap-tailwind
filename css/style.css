@@ -1,8 +1,8 @@
 .body {
-    background-color: rgb(233, 233, 233) !important;
+    background-color: rgb(255, 255, 255) !important;
 }
 .navbar-cor {
-    background-color: white !important;
+    background-color: rgb(255, 255, 255) !important;
     border-bottom: solid rgb(30, 0, 255) 3px;
 }
 
@@ -20,10 +20,32 @@
     width: 800px !important;
 }
 
-.h5-carrossel {
-    color: black;
+.h5-carrossel-giannis {
+    color: white;
     font-weight: bold;
-    background-color: green;    
+    background-color: green;
+    text-align: center;
+    padding: 0 !important;
+    margin: 0;    
+}
+
+
+.h5-carrossel-jokic {
+    color: white;
+    font-weight: bold;
+    background-color: rgb(0, 64, 255);
+    text-align: center;
+    padding: 0 !important;    
+    margin: 0;
+}
+
+.h5-carrossel-sga {
+    color: white;
+    font-weight: bold;
+    background-color: rgb(0, 145, 255);
+    text-align: center;
+    padding: 0 !important; 
+    margin: 0;   
 }
 
 .h1-mvp {
@@ -34,10 +56,65 @@
     display: flex;
     gap: 20px;
     justify-content: center;
-    padding-top: 40px;
+    padding-top: 20px;
 }
 
 .barra-progresso {
-    width: 1000px;
+    width: 800px;
     justify-self: center;
+}
+
+.h1-times {
+    padding-top: 50px;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.btn-NBA-div {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.link-NBA {
+    text-decoration: none !important;
+    color: white !important;
+}
+
+.div-btn-grupo-nba {
+    padding-top: 20px;
+    display: flex;
+    width: 400px;
+    justify-self: center;
+}
+
+.img-card {
+    object-fit: contain;
+    height: 300px;
+}
+
+.lista-pontos-item {
+    width: 500px;
+    align-self: center;
+    text-align: center;
+}
+
+.breadcrumb {
+    background-color: rgb(194, 194, 194);
+    padding: 0;
+    margin-bottom: 0;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.collapse-site-nba {
+    padding-bottom: 0;
+    justify-self: center;
+    padding-top: 20px;
+}
+
+.texto-collapse {
+    padding-bottom: 5px;   
+    text-align: center; 
 }

@@ -6,12 +6,18 @@
     <title>Atividade de Bootstrap e Tailwind</title>
     <link rel="stylesheet" href="css/reset.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
   <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary navbar-cor">
         <div class="container-fluid container-navbar">
-          <a class="navbar-brand" href="#">NBA</a>
+          <a class="navbar-brand" href="#">NBA</a> <div class="spinner-grow text-primary" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+          <div class="spinner-grow text-danger" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -20,22 +26,17 @@
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="#">Home</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-              </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Dropdown <span class="badge text-bg-secondary">2</span>
+                  Outros sites <span class="badge text-bg-secondary">2</span>
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  <li><a class="dropdown-item" href="outros-componentes.html">Outros Componentes</a></li>
+                  <li><a class="dropdown-item" href="tailwind.html">Tailwind</a></li>
                 </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                <a class="nav-link disabled" aria-disabled="true"><i class="fa fa-folder" aria-hidden="true"></i></a>
               </li>
             </ul>
             <form class="d-flex" role="search">
@@ -46,9 +47,21 @@
         </div>
     </nav>
 
-    <div class="alert alert-danger" role="alert">
+    <div class="alert alert-danger h1-mvp" role="alert">
         Este não é um site oficial da NBA
     </div>
+
+    <ul class="nav justify-content-center">
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="index.html">Página Principal</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="outros-componentes.html">Outros Componentes</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="tailwind.html">Tailwind</a>
+      </li>
+    </ul>
 
       <h1 class="h1-mvp">Principais candidatos a ganhar o MVP da temporada regular</h1>
 
@@ -62,22 +75,22 @@
           <div class="carousel-item active carrossel-img">
             <img src="imgs/giannis.webp" class="d-block w-100 tamanho-img-carrossel" alt="...">
             <div class="carousel-caption d-none d-md-block">
-              <h5 class="h5-carrossel">Giannis Antetokounmpo</h5>
-              <p>Greek Freak</p>
+              <h5 class="h5-carrossel-giannis">Giannis Antetokounmpo</h5>
+              <p class="h5-carrossel-giannis">Greek Freak</p>
             </div>
           </div>
           <div class="carousel-item carrossel-img">
             <img src="imgs/jokic.webp" class="d-block w-100 tamanho-img-carrossel" alt="...">
             <div class="carousel-caption d-none d-md-block">
-              <h5>Nikola Jokic</h5>
-              <p>Some representative placeholder content for the second slide.</p>
+              <h5 class="h5-carrossel-jokic">Nikola Jokic</h5>
+              <p class="h5-carrossel-jokic">The Joker</p>
             </div>
           </div>
           <div class="carousel-item carrossel-img">
             <img src="imgs/shai.webp" class="d-block w-100 tamanho-img-carrossel" alt="...">
             <div class="carousel-caption d-none d-md-block">
-              <h5>Shai Gilgeous-Alexander</h5>
-              <p>Some representative placeholder content for the third slide.</p>
+              <h5 class="h5-carrossel-sga">Shai Gilgeous-Alexander</h5>
+              <p class="h5-carrossel-sga">SGA</p>
             </div>
           </div>
         </div>
@@ -91,51 +104,174 @@
         </button>
       </div>
 
+      <div class="btn-group div-btn-grupo-nba" role="group" aria-label="Basic radio toggle button group">
+        <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+        <label class="btn btn-outline-primary" for="btnradio1">N</label>
+      
+        <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+        <label class="btn btn-outline-primary" for="btnradio2">B</label>
+      
+        <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+        <label class="btn btn-outline-primary" for="btnradio3">A</label>
+      </div>
+
+      <div class="btn-NBA-div">
+        <button type="button" class="btn btn-primary btn-NBA" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          Site Oficial NBA        
+        </button>
+
+      </div>
+      
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">NBA</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              Site Oficial da NBA!
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+              <button type="button" class="btn btn-primary btn-link-site"><a href="https://www.nba.com/" class="link-NBA">Ir para o site do NBA</a></button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="collapse-site-nba">
+        <p>
+          <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
+            Site da NBA na Wikipedia.
+          </button>
+        </p>
+        
+          <div class="collapse collapse-horizontal" id="collapseWidthExample">
+            <div class="card card-body" style="width: 300px;">
+              <p class="texto-collapse">Site da Wikipedia sobre a NBA.</p> <button type="button" class="btn btn-primary btn-link-site"><a href="https://pt.wikipedia.org/wiki/National_Basketball_Association" class="link-NBA">Ir para o site</a></button>
+            </div>
+          </div>  
+      </div>
+
       <div class="cards-times">
         <div class="card" style="width: 18rem;">
-            <img src="..." class="card-img-top" alt="...">
+            <img src="imgs/Oklahoma_City_Thunder.svg.png" class="card-img-top img-card" alt="...">
             <div class="card-body">
               <h5 class="card-title">Oklahoma City Thunder</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Página do OKC (ESPN)</a>
+              <p class="card-text">Obteve o melhor recorde dessa temporada regular e tem o provável MVP dessa temporada. Time extremamente forte com uma das melhores defesas de temporada.</p>
+              <a href="https://www.espn.com.br/nba/time/_/nome/okc/oklahoma-city-thunder" class="btn btn-primary">Página do OKC (ESPN) <i class="fa fa-step-forward" aria-hidden="true"></i></a>
             </div>
           </div>
           <div class="card" style="width: 18rem;">
-            <img src="..." class="card-img-top" alt="...">
+            <img src="imgs/Boston_Celtics.svg.png" class="card-img-top img-card" alt="...">
             <div class="card-body">
               <h5 class="card-title">Boston Celtics</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Página do Celtics (ESPN)</a>
+              <p class="card-text">É o atual campeão, logo é um favorito sem dúvidas. Além de terem tido um recorde impressionante na temporada regular.</p>
+              <a href="https://www.espn.com.br/nba/time/_/nome/bos/boston-celtics" class="btn btn-primary">Página do Celtics (ESPN) <i class="fa fa-step-forward" aria-hidden="true"></i></a>
             </div>
           </div>
           <div class="card" style="width: 18rem;">
-            <img src="..." class="card-img-top" alt="...">
+            <img src="imgs/Cleveland_Cavaliers_logo.svg.png" class="card-img-top img-card" alt="...">
             <div class="card-body">
               <h5 class="card-title">Cleveland Cavaliers</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Página do Cavs (ESPN)</a>
+              <p class="card-text">Estava tendo um recorde histórico na temporada regular, mas caiu o rendimento no decorrer da temporada. Dito isso, continua sendo um excelente competidor.</p>
+              <a href="https://www.espn.com.br/nba/time/_/nome/cle/cleveland-cavaliers" class="btn btn-primary">Página do Cavs (ESPN) <i class="fa fa-step-forward" aria-hidden="true"></i></a>
             </div>
           </div>
       </div>
 
+      <h1 class="h1-times">Chances desses times serem campeões essa temporada.</h1>
+
       <div class="barra-progresso">
+        <h3 class="p-barra">Oklahoma City Thunder</h3>
         <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
-            <div class="progress-bar" style="width: 50%"></div>
+            <div class="progress-bar" style="width: 50%">50%</div>
         </div>
-        <h3 class="p-barra">Lakers</h3>
+        <h3 class="p-barra">Boston Celtics</h3>
         <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
-            <div class="progress-bar" style="width: 0%"></div>
+            <div class="progress-bar" style="width: 30%">30%</div>
+        </div>
+        <h3 class="p-barra">Cleveland Cavaliers</h3>
+        <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-bar" style="width: 20%">20%</div>
+        </div>
+      </div><br><br>
+
+      <h2 class="h1-mvp">Jogadores com a maior média de pontos por jogo</h2><br>
+      <ul class="list-group">
+        <li class="list-group-item lista-pontos-item">Shai Gilgeous-Alexander - 32.7</li>
+        <li class="list-group-item lista-pontos-item">Giannis Antetokounmpo - 30.4</li>
+        <li class="list-group-item lista-pontos-item">Nikola Jokic - 29.6</li>
+        <li class="list-group-item lista-pontos-item">Luka Doncic - 28.2</li>
+        <li class="list-group-item lista-pontos-item">Anthony Edwards - 27.6</li>
+      </ul>
+      <br>
+      <br>
+
+      <h2 class="h1-mvp">Jogadores Históricos que ainda estão em atividade na NBA.</h2><br>
+      <div class="accordion accordion-posicao" id="accordionExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              LeBron James
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <p>LeBron James é um dos maiores jogadores da história do basquete. Nascido em 1984, nos Estados Unidos, ele se destacou desde jovem e entrou na NBA em 2003. Com passagens marcantes pelo Cleveland Cavaliers, Miami Heat e Los Angeles Lakers, LeBron conquistou múltiplos títulos da NBA e prêmios individuais. Além das quadras, ele também é conhecido por seu trabalho social e por investir na educação de jovens em comunidades carentes. Sua influência vai muito além do esporte.</p>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              Stephen Curry
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <p>Stephen Curry é um dos jogadores mais influentes e revolucionários da história do basquete. Nascido em 1988, nos Estados Unidos, ele ganhou destaque por transformar o jeito como o jogo é jogado, principalmente com seus arremessos de três pontos precisos e rápidos. Entrou na NBA em 2009, jogando pelo Golden State Warriors, equipe com a qual conquistou diversos títulos e foi eleito MVP da liga mais de uma vez.
+
+                Curry é conhecido não apenas pelo talento, mas também pela humildade e dedicação. Apesar de não ter começado a carreira com grande destaque, ele superou expectativas e se tornou referência mundial no esporte. Fora das quadras, também é ativo em causas sociais e projetos educacionais.</p>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              Kevin Durant
+            </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <p>Kevin Durant é um dos maiores talentos ofensivos da história da NBA. Nascido em 1988, nos Estados Unidos, ele se destacou ainda jovem no basquete universitário e foi a segunda escolha do draft de 2007. Desde então, teve passagens marcantes por times como Oklahoma City Thunder, Golden State Warriors, Brooklyn Nets e Phoenix Suns.
+
+                Durant é conhecido por sua altura (2,08 m) combinada com habilidade, velocidade e precisão nos arremessos — algo raro para um jogador da sua posição. Com os Warriors, conquistou dois títulos da NBA e foi MVP das finais em ambas as ocasiões. Além disso, já foi MVP da temporada regular e é constantemente lembrado como um dos maiores pontuadores da liga.
+                
+                Fora das quadras, Durant também se envolve em projetos sociais e empresariais, sempre com uma postura mais reservada e focada.</p>
+            </div>
+          </div>
         </div>
       </div>
 
+      
+      <br>
+      <p aria-hidden="true">
+        <span class="placeholder col-6"></span>
+      </p>
+      
+      <a class="btn btn-primary disabled placeholder col-4" aria-disabled="true"></a><br>
+      <br>
+
       <nav style="--bs-breadcrumb-divider: '';" aria-label="breadcrumb">
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="#">Home</a></li>
-          <li class="breadcrumb-item active" aria-current="page">Library</li>
+        <ol class="breadcrumb breadcrumb-cor">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item"><a href="outros-componentes.html">Outros Componentes</a></li>
+          <li class="breadcrumb-item"><a href="Tailwind">Tailwind</a></li>
         </ol>
       </nav>
-
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
   </body>
 </html>
